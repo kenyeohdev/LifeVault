@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ---- LifeVault theme: cream + forest green + pastel accents ------------- */
+:root {
+  --background: #f3ede2;
+  --panel: #fffdf8;
+  --panel-alt: #faf4e8;
+  --foreground: #2b2a23;
+  --muted: #8c8373;
+  --border: #e7ddc9;
+  --hero-1: #2b352a;
+  --hero-2: #414f3d;
+  --hero-text: #f3ede2;
+  --hero-accent: #a9bf95;
+  --sage: #aebf9e;
+  --sage-text: #5a6e4b;
+  --sage-soft: #e6ebdd;
+  --rose: #d7a28d;
+  --rose-text: #9c5a42;
+  --rose-soft: #f3e2d9;
+  --clay: #c79b6f;
+  --clay-text: #8a5a2e;
+  --clay-soft: #f0e2cd;
+  --tan: #d6c296;
+  --tan-text: #85703c;
+  --tan-soft: #f1e8d4;
+  --stone: #b7ae9c;
+  --stone-text: #6a6354;
+  --stone-soft: #e8e3d6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-panel: var(--panel);
+  --color-panel-alt: var(--panel-alt);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-hero-1: var(--hero-1);
+  --color-hero-2: var(--hero-2);
+  --color-hero-text: var(--hero-text);
+  --color-hero-accent: var(--hero-accent);
+  --color-sage: var(--sage);
+  --color-sage-text: var(--sage-text);
+  --color-sage-soft: var(--sage-soft);
+  --color-rose: var(--rose);
+  --color-rose-text: var(--rose-text);
+  --color-rose-soft: var(--rose-soft);
+  --color-clay: var(--clay);
+  --color-clay-text: var(--clay-text);
+  --color-clay-soft: var(--clay-soft);
+  --color-tan: var(--tan);
+  --color-tan-text: var(--tan-text);
+  --color-tan-soft: var(--tan-soft);
+  --color-stone: var(--stone);
+  --color-stone-text: var(--stone-text);
+  --color-stone-soft: var(--stone-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-display-serif);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b1a16;
+    --panel: #232019;
+    --panel-alt: #2b2720;
+    --foreground: #f0ebe0;
+    --muted: #b8ae9c;
+    --border: #3c362b;
+    --hero-1: #1c241b;
+    --hero-2: #2e392b;
+    --hero-text: #f0ebe0;
+    --hero-accent: #bcd1a8;
+    --sage: #bcd1a8;
+    --sage-text: #bcd1a8;
+    --sage-soft: #2c3626;
+    --rose: #e3b49f;
+    --rose-text: #e3b49f;
+    --rose-soft: #3c2d25;
+    --clay: #dcae7c;
+    --clay-text: #dcae7c;
+    --clay-soft: #3a2e1d;
+    --tan: #e3d2a6;
+    --tan-text: #e3d2a6;
+    --tan-soft: #332c1b;
+    --stone: #cbc2ae;
+    --stone-text: #cbc2ae;
+    --stone-soft: #302c23;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}

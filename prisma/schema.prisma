@@ -1,0 +1,32 @@
+// LifeVault — Prisma schema
+// Run `npx prisma migrate dev --name init` after setting DATABASE_URL in .env.local
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// One row per signed-up person. clerkId links this row to their Clerk account —
+// Clerk owns the actual login/password/session, this table owns everything else.
+model User {
+  id        String   @id @default(cuid())
+  clerkId   String   @unique
+  email     String   @unique
+  name      String?
+  dob       DateTime?
+
+  // Which wealth-tracker tabs this user has turned on for themselves, e.g.
+  // ["insurance", "property", "bank", "other", "savings"]. Empty until they
+  // finish onboarding. Keep the allowed values in sync with AVAILABLE_TABS
+  // in src/lib/tabs.ts.
+  enabledTabs String[] @default([])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
